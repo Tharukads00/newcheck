@@ -1,9 +1,7 @@
 var disMain = 0;
 var disInc = 0;
 var disDec = 0;
-var ranRed = 0,
-  ranGreen = 0,
-  ranBlue = 0;
+
 var ran = [];
 
 // Set initial background color on page load
