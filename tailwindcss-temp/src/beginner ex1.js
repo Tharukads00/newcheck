@@ -83,35 +83,42 @@ function randomColor() {
     Math.floor(Math.random() * 256),
     Math.floor(Math.random() * 256),
   ];
-  console.log(ranRed, ranGreen, ranBlue);
+  console.log(ran[0], ran[1], ran[2]);
   let hexColor = convertRGBtoHex(ran[0], ran[1], ran[2]);
   console.log(hexColor);
   return hexColor;
 }
 
+
 function incre() {
   disMain = disMain + 1;
   disInc = disInc + 1;
+  var ranNum = randomColor();
 
-  document.body.style.backgroundColor = randomColor();
+  document.body.style.backgroundColor = ranNum;
 
   if (disMain < 50) {
     document.getElementById("counter").innerHTML = disMain;
     document.getElementById("counter-inc").innerHTML = disInc;
+    document.getElementById("btnInc").style.backgroundColor = ranNum;
   } else {
     alert("Counter limit reached");
   }
 }
 
+
+
 function decre() {
   disMain = disMain - 1;
   disDec = disDec + 1;
-  document.body.style.backgroundColor = randomColor();
+  var ranNum = randomColor();
+
+  document.body.style.backgroundColor = ranNum;
 
   if (disMain >= 0) {
     document.getElementById("counter").innerHTML = disMain;
     document.getElementById("counter-dec").innerHTML = disDec;
-    document.getElementById("btnDec").style.backgroundColor = randomColor();
+    document.getElementById("btnDec").style.backgroundColor = ranNum;
   } else {
     alert("Counter limit reached");
   }

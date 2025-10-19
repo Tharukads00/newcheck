@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <link rel="icon" type="image" href="../img/371ba38b-8a03-4bff-916c-c3fa5396ceda.jpeg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" type="image" href="../img/371ba38b-8a03-4bff-916c-c3fa5396ceda.jpeg" />
     <script src="beginner ex1.js"></script>
     <title>Counter</title>
 </head>
-<body class=" min-h-screen flex flex-col  bg-[#008B8B] items-center justify-center">
-    <div class=" bg-gray-200 p-10 w-120 h-100  border-2 border-black flex flex-col items-center justify-center rounded-lg shadow-lg" > 
 
-        <label for="count" id="counter" class="text-center font-bold text-4xl font-serif font-stretch-semi-condensed"> 000 </label>
+<body class="min-h-screen flex flex-col bg-[#008B8B] items-center justify-center">
+    <div
+        class="bg-gray-200 p-10 w-120 h-100 border-2 border-black flex flex-col items-center justify-center rounded-lg shadow-lg">
+        <label for="count" id="counter" class="text-center font-bold text-4xl font-serif font-stretch-semi-condensed">
+            000
+        </label>
         <div>
-            <button id="btnDec" type="button" class="font-sans border-2 m-5 mr-3 p-2 bg-gray-400 hover:bg-gray-500 rounded-md" onclick="decre()"> Decrement</button>
-            
-            <button id="btnInc" type="button" class="font-sans border-2 m-5 ml-3 p-2 bg-gray-400 hover:bg-gray-500 rounded-md" onclick="incre()"> Increment</button>
+            <button id="btnDec" type="button"
+                class="font-sans border-2 m-5 mr-3 p-2 bg-gray-400 hover:bg-pink-500 rounded-md" onclick="decre()">
+                Decrement
+            </button>
+
+            <button id="btnInc" type="button"
+                class="font-sans border-2 m-5 ml-3 p-2 bg-gray-400 hover:bg-orange-500 rounded-md" onclick="incre()">
+                Increment
+            </button>
         </div>
 
         <div class="font-black text-blue-700">
-            <p >Clicks on Increment : <span id="counter-inc"></span></p>
-            <p >Clicks on Decrement : <span id="counter-dec"></span></p>
+            <p>Clicks on Increment : <span id="counter-inc"></span></p>
+            <p>Clicks on Decrement : <span id="counter-dec"></span></p>
         </div>
     </div>
 </body>
