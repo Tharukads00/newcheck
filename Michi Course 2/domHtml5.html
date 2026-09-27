@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attibutes</title>
+
+    <style>
+      img#car {
+        width: 100%;
+        height: 50%;
+      }
+
+      .button {
+        border: 2px dotted red;
+        font-size: larger;
+        padding: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+
+      button:hover {
+        background-color: yellow;
+        background-size: 30%;
+        border-radius: 10px;
+        width: 200px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <img id="car" src="mustang gt.jfif" />
+    <button>Click to Change</button>
+
+    <script>
+      const img = document.querySelector("img");
+      const btn = document.querySelector("button");
+
+      function changeImg() {
+        if (img.getAttribute("src") == "mustang gt.jfif") {
+          img.setAttribute("src", "Aston-Martin-DB12-Volante_13.jpg");
+          //btn.setAttribute('disabled', 'true')
+
+          btn.classList.remove("button");
+        } else {
+          img.setAttribute("src", "mustang gt.jfif");
+          btn.classList.add("button");
+
+        }
+
+        console.log(img.getAttribute("src"));
+      }
+
+      btn.addEventListener("click", changeImg);
+    </script>
+  </body>
+</html>

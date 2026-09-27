@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Cached dog image</title>
+  <desc id="desc">A simple local dog illustration used by the fetch cache.</desc>
+  <rect width="640" height="420" fill="#fff3e0"/>
+  <circle cx="320" cy="205" r="112" fill="#c47a3b"/>
+  <circle cx="236" cy="176" r="58" fill="#8b4a22"/>
+  <circle cx="404" cy="176" r="58" fill="#8b4a22"/>
+  <circle cx="280" cy="198" r="13" fill="#1f1f1f"/>
+  <circle cx="360" cy="198" r="13" fill="#1f1f1f"/>
+  <ellipse cx="320" cy="238" rx="28" ry="20" fill="#1f1f1f"/>
+  <path d="M320 256 Q300 286 270 268" fill="none" stroke="#1f1f1f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M320 256 Q340 286 370 268" fill="none" stroke="#1f1f1f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M238 130 Q202 84 174 140 Q190 206 238 196" fill="#8b4a22"/>
+  <path d="M402 130 Q438 84 466 140 Q450 206 402 196" fill="#8b4a22"/>
+</svg>

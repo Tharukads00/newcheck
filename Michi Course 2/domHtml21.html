@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>Submit</button>
+    <ul id="output"></ul>
+    <script>
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const outp = document.querySelector("#output");
+
+      const BASE_URL = "https://api.datamuse.com/words?";
+
+      button.addEventListener("click", () => {
+        const searchTerm = input.value;
+
+        const params = new URLSearchParams();
+        params.set("ml", searchTerm);
+
+        fetch(BASE_URL + params.toString())
+          .then((response) => response.json())
+          .then((result) => {
+            outp.innerHTML = "";
+
+            for (const r of result) {
+              const li = document.createElement("li");
+              li.textContent = r.word;
+              outp.append(li);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

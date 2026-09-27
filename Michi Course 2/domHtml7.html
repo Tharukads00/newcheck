@@ -1,0 +1,35 @@
+<!-- adding the elements to dom tree and how it works testing -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Create</title>
+</head>
+<body>
+    <h1>Element Creating </h1>
+    <ul id = "comments-container">
+
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul');
+        const comments = [
+            "Very helpful; thanks!",
+            "yay! That solved my problem",
+            "Could you explain a little more?"
+        ]
+
+        for(const comnt of comments){
+           console.log(comnt);
+           const li = document.createElement('li');
+           li.textContent = comnt;
+            
+
+           ul.append(li)
+        }
+
+    </script>
+</body>
+</html>

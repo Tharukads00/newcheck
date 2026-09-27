@@ -4,6 +4,10 @@ var disDec = 0;
 
 var ran = [];
 
+var btnDec  = document.getElementById("btnDec");
+var btnInc  = document.getElementById("btnInc");
+
+
 // Set initial background color on page load
 
 //RGB to Hexadecimal values
@@ -52,9 +56,11 @@ function convertRGBtoHex(R, G, B) {
   if (R >= 0 && R <= 255 && G >= 0 && G <= 255 && B >= 0 && B <= 255) {
     let hexCode = "#";
     hexCode += decToHexa(R);
+    console.log(hexCode);
     hexCode += decToHexa(G);
+    console.log(hexCode);
     hexCode += decToHexa(B);
-
+    
     return hexCode;
   }
 
@@ -62,20 +68,8 @@ function convertRGBtoHex(R, G, B) {
   else return "-1";
 }
 
-// Button triggering function.
-
-// function updateBackgroundColor(value) {
-//     const counterElement = document.getElementById("counter");
-//     // First, remove any existing background color classes to avoid conflicts
-//     counterElement.classList.remove("bg-pink-700", "bg-green-400", "bg-red-200");
-
-//     // Then, add the correct class based on the value
-//     if (value > 10) {
-//         counterElement.classList.add("bg-green-400");
-//     } else { // for 0
-//         counterElement.classList.add("bg-pink-700");
-//     }
-// }
+// Function to generate
+// random color code
 
 function randomColor() {
   ran = [
@@ -84,7 +78,7 @@ function randomColor() {
     Math.floor(Math.random() * 256),
   ];
   console.log(ran[0], ran[1], ran[2]);
-  let hexColor = convertRGBtoHex(ran[0], ran[1], ran[2]);
+  var hexColor = convertRGBtoHex(ran[0], ran[1], ran[2]);
   console.log(hexColor);
   return hexColor;
 }
@@ -123,3 +117,6 @@ function decre() {
     alert("Counter limit reached");
   }
 }
+
+btnDec.addEventListener("click", decre)
+btnInc.addEventListener("click", incre);

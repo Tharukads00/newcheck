@@ -1,0 +1,49 @@
+<!-- learning the how synchrounsly task working.
+It shows the another task is running after first one completed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronous and Asynchronous understanding</title>
+    <style>
+      div {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="first-btn">Click me</button>
+      <p id="click_count">You have not clicked the button</p>
+    </div>
+    <div>
+      <button class="start-btn">Start Timer</button>
+      <p id="timer_content">Five seconds have **not** passed</p>
+    </div>
+
+    <div>
+      <em
+        >Notice how <strong>the page freezes</strong> when we start the timer
+        (nothing else can run)
+      </em>
+    </div>
+    <script>
+      let clickCount = 0;
+      const btnClick = document.querySelector(".first-btn");
+      btnClick.addEventListener("click", () => {
+        const clickCounter = document.querySelector("#click_count");
+        clickCount++;
+        clickCounter.textContent = `You have clicked ${clickCount} time(s)`;
+      });
+
+      const timer = document.querySelector(".start-btn");
+      timer.addEventListener("click", () => {
+        const timerText = document.querySelector("#timer_content");
+        timerText.textContent = "Timer started";
+        synchronousPause(5000);
+        timerText.textContent = "Five seconds have passes";
+      });
+    </script>
+  </body>
+</html>

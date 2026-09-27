@@ -1,0 +1,60 @@
+// this HTML cod euse to learn the classList attibute // It has three main
+methods .add .remove and .contain
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test HTML</title>
+    <style>
+      .item {
+        font-style: italic;
+        color: blueviolet;
+        border: 2px solid black;
+        margin: 5px 200px 5px 4px;
+        padding-left: 10px;
+        padding-right: 15px;
+      }
+
+      .selected {
+        color: red;
+        background-color: yellow;
+        font-style: normal;
+        font-weight: bold;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="item">Item 1</li>
+      <li class="item selected">Item 2</li>
+      <li class="item">Item 3</li>
+      <li class="item">Item 4</li>
+      <li class="item selected">Item 5</li>
+      <li class="item">Item 6</li>
+    </ul>
+
+    <script>
+      const elItem = document.querySelectorAll("li");
+
+      for (const item of elItem) {
+        // define the code for click on function on the items.
+
+        function onClick() {
+          //   if (item.classList.contains("selected")) {
+          //     item.classList.remove("selected");
+          //   } else {
+          //     item.classList.add("selected");
+          //   }
+
+          // can be simplyfy the code using the toggle function. It can do bot of adding and removing in one line of code.
+          item.classList.toggle("selected");
+        }
+
+        item.addEventListener("click", onClick);
+      }
+    </script>
+  </body>
+</html>

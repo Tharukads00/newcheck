@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event Bubbling and Propagation</title>
+
+    <style>
+        #outer{
+            background-color: #aaa;
+            padding: 10px;
+        }
+
+        #inner{
+            background-color: #ccc;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+
+        function all(){
+            const outer = document.querySelector('#outer');
+            const inner = document.querySelector('#inner');
+            const btn = document.querySelector('button');
+
+            outer.addEventListener('click', ()=>{
+                console.log("Outer, bubbling")
+            })
+            outer.addEventListener('click', ()=>{
+                console.log("Outer, capture")
+            }, true)
+            inner.addEventListener('click', ()=>{
+                console.log("Inner, bubbling")
+            })
+            inner.addEventListener('click', ()=>{
+                console.log("Inner, capture")
+            }, true)
+            btn.addEventListener('click', ()=>{
+                console.log("Button, bubbling")
+            })
+            btn.addEventListener('click', (event)=>{
+                console.log("Button, capture")
+                event.stopPropagation()
+            }, true)
+
+        }
+        window.addEventListener('load',all)
+    </script>
+  </head>
+  <body>
+    <div id="outer">
+      outer
+      <div id="inner">
+        Inner
+
+        <button>Click me</button>
+      </div>
+    </div>
+  </body>
+</html>

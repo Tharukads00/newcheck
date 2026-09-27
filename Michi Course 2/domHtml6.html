@@ -1,0 +1,45 @@
+<!-- input types and input properties -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input Check</title>
+    <script>
+      window.addEventListener("load",() => {
+        console.log(window.innerWidth)
+        const inp = document.querySelector("input");
+      const btn = document.querySelector("button");
+      const greet = document.querySelector(".greet");
+
+
+      
+      function clickMe() {
+        if (inp.value.trim == "") {
+          console.log("Empty");
+        } else {
+          console.log(inp.value);
+          greet.textContent = "Hello, " + inp.value;
+          inp.focus();
+          inp.value = "";
+        }
+      }
+
+      btn.addEventListener("click", clickMe);
+      })
+    </script>
+  </head>
+  <body>
+    <p>The input proporties testing</p>
+    <label for="txt">Enter the Name : </label>
+    <input type="text" name="" id="txt" style="width: 300px; height: 20px" ; />
+    <button style="position: relative">Enter</button>
+    <p class="greet"></p>
+
+    <!-- <script>
+      
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Choose a background color</h1>
+    <div id="color-buttons">
+      <button id="red-btn">red</button>
+      <button id="blue-btn">blue</button>
+    </div>
+
+    <script>
+      // ===== YOUR TASK =====
+      // Wire the two buttons to change the page background color.
+      const redButtton  = document.querySelector("#red-btn");
+      const blueButton  = document.querySelector("#blue-btn");
+
+      // Full details are in the problem description.
+      //
+      // TODO: select #red-btn and #blue-btn, define functions that
+      //       swap the 'red'/'blue' class on document.body, and add
+      //       click listeners so each button sets its color.
+
+      function setRedBackground(){
+        document.body.classList.remove('blue');
+        document.body.classList.add('red');
+
+      }
+      
+      function setBlueBackground(){
+        document.body.classList.remove('red');
+        document.body.classList.add('blue');
+
+      }
+
+      redButtton.addEventListener("click", setRedBackground);
+      blueButton.addEventListener("click", setBlueBackground);
+
+      
+    </script>
+  </body>
+</html>

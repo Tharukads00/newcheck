@@ -1,0 +1,52 @@
+<!-- learning the setting timer and intervals -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set TimeOut</title>
+    <style>
+      #interval {
+        margin: 30px;
+        position: absolute;
+        color: red;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Start 3s Timer</button>
+
+    <button id="interval">Make Intervals</button>
+
+    <script>
+      const btn = document.querySelector("button");
+      const btnInt = document.querySelector("#interval");
+
+      function onClick() {
+        console.log("Before Start the Timer");
+
+        function timerDone() {
+          console.log("Timer is done!");
+          btn.removeEventListener("click", onClick);
+        }
+
+        setTimeout(timerDone, 3000);
+      }
+
+
+      function interval(event){
+        setInterval(() =>{
+            console.log(event);
+            console.log("Interval is over")
+        }, 4000)
+      }
+
+
+      btnInt.addEventListener('click', interval);
+      btn.addEventListener("click", onClick);
+    </script>
+  </body>
+</html>

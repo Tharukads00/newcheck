@@ -1,0 +1,51 @@
+<!-- How events are working and principles of call back function work -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Event Objects</p>
+
+    <input type="text" placeholder="Type Here">
+    <button>Submit Me</button>
+
+    <script>
+        const txtBox = document.querySelector('input');
+        const btn = document.querySelector('button')
+
+        function takeData(event){
+            const p = document.createElement('p');
+            const delBtn = document.createElement('button');
+            delBtn.textContent = "delete";
+            p.textContent = txtBox.value;
+
+            delBtn.addEventListener("click", () => {p.remove()})
+
+            document.body.append(p);
+            p.append(delBtn);
+            txtBox.focus();
+            txtBox.value = '';
+
+            console.log("clicked the mouse");
+            console.log(event);
+        }
+
+        function onKeyDown(ev){
+            if (ev.key === "Enter"){
+                takeData();
+                console.log("Pressed [enter]");
+                console.log(txtBox.value);
+            }
+        }
+
+        btn.addEventListener("click", takeData);
+
+        txtBox.addEventListener("keydown", onKeyDown);
+    </script>
+</body>
+</html>

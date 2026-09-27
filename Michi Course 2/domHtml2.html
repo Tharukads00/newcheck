@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Lists</h1>
+
+    <ul id="list">
+      <li class="highlight">First</li>
+      <li>Second</li>
+      <li class="highlight">Third</li>
+      <li>Fourth</li>
+    </ul>
+
+    <ul id="other">
+      <li class="highlight">Other first</li>
+      <li>Other Second</li>
+    </ul>
+
+    <script>
+        const p = document.querySelector('p');
+
+        if (p){
+            console.log(p.innerText);
+        }else{
+            console.log("paragraph does not exist.");
+        }
+
+
+        //looping over nodearray
+        const item = document.querySelectorAll('li');
+
+        for(const im of item){
+            console.log(im.innerText);
+        }
+
+        const fli = document.querySelector('li');
+
+        console.log(fli.parentNode.id)
+        
+        const list  = document.querySelector('ul#list');
+
+        console.log(list.children.length)
+
+        
+
+    </script>
+  </body>
+</html>

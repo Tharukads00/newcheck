@@ -1,0 +1,30 @@
+<!-- whack a mole game  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .hole{
+            width: 100px;
+            height: 100px;
+            background-color: #999;
+            cursor: pointer;
+        }
+
+        .needs-whack{
+            background-color: red;
+            background-image: url("whack-a-mole.jfif");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <table id ="game-board"></table>
+    <div id="update-score"></div>
+    <script src="whack-a-mole.js"></script>
+</body>
+</html>

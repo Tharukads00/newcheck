@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Testing</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <label><input type="checkbox" /> Thunderhawk</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Crescent Ridge Maulers</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Lakeshore Phantoms</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Twin Mesa Outlaws</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Sonevale Rovers</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Black Hollow United</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Port Caldera Wanderers</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Veridian Heights Pulse</label>
+      </li>
+      <li>
+        <label><input type="checkbox" />Frostmoor Blizzards</label>
+      </li>
+    </ul>
+
+    <button id="btn">Add to Favorites</button>
+
+    <script>
+      const btn = document.querySelector("button");
+      function AddClick() {
+        console.log("--------------");
+        console.log("User clicked the button");
+
+        const checkList = document.querySelectorAll("input:checked");
+        // get the checed inputs to list
+
+        //console.log("Check boxes ",checkList)
+
+        //loop over the checked lis
+
+        for (const item of checkList) {
+          console.log(item.parentNode.textContent);
+        }
+
+        console.log("--------------");
+      }
+
+      btn.addEventListener("click", AddClick);
+    </script>
+  </body>
+</html>

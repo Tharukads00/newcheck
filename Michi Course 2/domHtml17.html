@@ -1,0 +1,26 @@
+<!-- Promise .then appy and add another argument as a error -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve(42);
+            },5000)
+        })
+
+        myPromise.then((val)=>{
+            console.log("The promise was fulfilled!");
+            console.log(val);
+        },(err)=>{
+            console.log("Sometjing wet wrong!");
+            console.log(err);})
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatted Data</title>
+</head>
+<body>
+
+    <div id= "data-dis"></div>
+    <script>
+        const base_url = "https://events.umich.edu/day/json?v=2";
+        const display = document.querySelector("#data-dis")
+        
+        fetch(base_url).then((respons)=>{
+            return respons.json()
+        }).then((text)=>{
+            
+            for (const item of text){
+                const newEl = document.createElement("h5");
+                newEl.textContent = item.combined_title;
+                display.append(newEl, item.description);
+            }
+        })
+
+
+    </script>
+</body>
+</html>

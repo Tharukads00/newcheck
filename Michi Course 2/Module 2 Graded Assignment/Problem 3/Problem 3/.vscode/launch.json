@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "npm install",
+            "type": "node",
+            "request": "launch",
+            "name": "Test My Code",
+            "program": "/home/coder/assignments/assignment-test-server.js",
+            "args": [
+                "--target",
+                "${workspaceFolder}"
+            ],
+            "cwd": "/home/coder/assignments",
+            "console": "integratedTerminal"
+        }
+    ]
+}
